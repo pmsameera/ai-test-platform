@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  backend:
+    image: alpine
+    command: ["sh", "-c", "echo Backend service placeholder"]
+  frontend:
+    image: alpine
+    command: ["sh", "-c", "echo Frontend service placeholder"]

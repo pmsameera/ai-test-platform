@@ -1,0 +1,80 @@
+# ==========================
+# Python
+# ==========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environments
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Mypy
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# ==========================
+# Node.js
+# ==========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build Output
+dist/
+build/
+
+# ==========================
+# Environment Variables
+# ==========================
+.env
+.env.*
+!.env.example
+
+# ==========================
+# VS Code
+# ==========================
+.vscode/
+
+# ==========================
+# macOS
+# ==========================
+.DS_Store
+
+# ==========================
+# Docker
+# ==========================
+*.log
+
+# ==========================
+# Database
+# ==========================
+*.db
+*.sqlite3
+
+# ==========================
+# Coverage
+# ==========================
+coverage/
+
+# ==========================
+# IDEs
+# ==========================
+.idea/
+
+# ==========================
+# Miscellaneous
+# ==========================
+*.swp
+*.tmp
