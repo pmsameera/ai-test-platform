@@ -11,11 +11,10 @@ app=FastAPI(
 version="0.1.0"
 )
 
-Base.metadata.create_all(bind=engine)
+#Base.metadata.create_all(bind=engine)
 
 app.include_router(
-    health_router,
-    prefix="/api/v1"
+    health_router
 )
 app.include_router(
     requirements_router
@@ -35,5 +34,3 @@ def db_check():
     return {
         "database": "connected"
     }
-
-
