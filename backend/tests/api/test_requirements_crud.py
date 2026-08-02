@@ -1,8 +1,4 @@
-from backend.app.models import requirement
-from fastapi.testclient import TestClient
-from app.main import app
-
-client=TestClient(app)
+from tests.conftest import client
 
 
 def test_get_requirements():

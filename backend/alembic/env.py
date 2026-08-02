@@ -6,6 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 from app.database import Base 
 from app.models.requirement import Requirement
+from app.models.testcase import TestCase
 from app.config import DATABASE_URL
 
 # this is the Alembic Config object, which provides
@@ -65,7 +66,9 @@ def run_migrations_online() -> None:
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection,
+            target_metadata=target_metadata,
+            compare_type=True
         )
 
         with context.begin_transaction():

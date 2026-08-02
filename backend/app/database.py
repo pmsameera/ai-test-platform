@@ -7,6 +7,8 @@ engine = create_engine(
     DATABASE_URL
 )
 
+print(f"Database URL: {DATABASE_URL}")  # Debugging line to print the database URL
+
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
