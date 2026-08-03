@@ -1,10 +1,10 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class TestCaseBase(BaseModel):
-    title:str
-    description:str
-    steps:str
-    expected_result:str 
+    title:str = Field(..., min_length=1)
+    description:str = Field(..., min_length=1)
+    steps:str = Field(..., min_length=1)
+    expected_result:str = Field(..., min_length=1)
 
 class TestCaseCreate(TestCaseBase):
     requirement_id:int
@@ -19,8 +19,8 @@ class TestCaseResponse(TestCaseBase):
     }
 
 class TestCaseUpdate(BaseModel):
-    title: str | None = None
-    description: str | None = None
-    steps: str | None = None
-    expected_result: str | None = None
-    actual_result: str | None = None
+    title: str | None = Field(None, min_length=1)
+    description: str | None = Field(None, min_length=1)
+    steps: str | None = Field(None, min_length=1)
+    expected_result: str | None = Field(None, min_length=1)
+    actual_result: str | None = Field(None, min_length=1)
