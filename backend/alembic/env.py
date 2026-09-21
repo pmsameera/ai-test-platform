@@ -6,6 +6,7 @@ from sqlalchemy import pool
 from alembic import context
 from app.database import Base 
 from app.models.requirement import Requirement
+from app.models.ai_generation import AIGeneration
 from app.models.testcase import TestCase
 from app.config import DATABASE_URL
 
