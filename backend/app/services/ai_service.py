@@ -1,3 +1,4 @@
+import json
 import os
 from pathlib import Path
 from dotenv import load_dotenv
@@ -50,4 +51,8 @@ Return ONLY valid JSON:
             contents=prompt,  
         )
 
-        return {"model": "gemini-2.5-flash", "prompt": prompt, "response": response.content}
+        generated_text = response.text
+
+        generated_data = json.loads(generated_text)
+
+        return {"model": "gemini-3.6-flash", "prompt": prompt, "response": generated_data}

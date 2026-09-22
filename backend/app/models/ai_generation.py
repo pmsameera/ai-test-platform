@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Text, DateTime
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
+from sqlalchemy.dialects.postgresql import JSONB
 
 from app.database import Base
 
@@ -19,7 +20,7 @@ class AIGeneration(Base):
 
     prompt = Column(Text, nullable=False)
 
-    response = Column(Text, nullable=False)
+    response = Column(JSONB, nullable=False)
 
     status = Column(
         String(50),

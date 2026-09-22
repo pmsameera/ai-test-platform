@@ -1,4 +1,4 @@
-from tests.conftest import client
+from automation.tests.tests.conftest import client
 
 
 def test_get_requirements():

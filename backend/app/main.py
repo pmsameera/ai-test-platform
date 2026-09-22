@@ -2,7 +2,6 @@ from fastapi import FastAPI
 from app.api.v1.health import router as health_router
 from app.api.v1.requirements import router as requirements_router
 from app.api.v1.testcases import router as testcases_router 
-from app.api.v1.generate_test_cases import router as generate_tests_router
 from sqlalchemy import text
 from app.database import engine
 from fastapi.middleware.cors import CORSMiddleware
@@ -34,10 +33,6 @@ app.include_router(
 
 app.include_router(
     testcases_router
-)
-
-app.include_router(
-    generate_tests_router
 )
 
 @app.get('/')

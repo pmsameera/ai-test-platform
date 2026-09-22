@@ -1,4 +1,4 @@
-from tests.conftest import client
+from automation.tests.tests.conftest import client
 
 def test_health_check():
   response = client.get("api/v1/health")
